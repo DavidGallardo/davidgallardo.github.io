@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<header>
+  {% include navigation.html %}
+  <div class="h1-eyebrow">David Gallardo</div>
+  <h1>A guy who's focused on designing products that work beautifully.</h1>
+</header>
+<section id="">
+  <div>
+    <div>
+      <h2>My long story, short.</h2>
+    </div>
+    <div>
+      <div class="column-left">
+        <p>I'm a Designer based in Barcelona who loves sports and has been <a href="#">traveling</a> around the world the whole 2017. Me & my partner started in Rusia and will finish in San Francisco. Before that decision, I was working at <a href="#">Lola-Mullenlowe</a> as a Lead Designer of a small team of 3 to 4 other designers. Even with a team that small, we got a really big project in our hands: Rethink & Improve the Global Digital Ecosystem of a Spanish automotive brand, <a href="#">SEAT</a>.</p>
+      </div>
+      <div class="column-left">
+        <p>Even before, I worked for a really cool company called <a href="#">Mobivery</a>. There I crafted tons of mobile applications for all the clients & platforms you can imagine. Also there, I had the opportunity to work on <a href="#">Malcom</a>, a SaaS for Mobile Marketing that combined push, analytics and a layer of BI.
+        In the side, I taught design in schools like <a href="#">Ironhack</a> or <a href="#">TheAppSchool</a>; and directly to design teams inside companies like <a href="#">Schneider Electrics</a> or <a href="#">TV3</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section>
+<ul>
+  {% for post in site.categories.case limit:10 %}
+    <li >
+      <div>
+        <h3><a href="{{ post.url | relative_url }}">{{post.title}}</a></h3>
+        <div>{{post.type}}</div>
+        <p>{{post.excerpt}}</p>
+        <a href="{{ post.url | relative_url }}"">Leer Post</a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+</section>

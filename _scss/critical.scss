@@ -1,0 +1,50 @@
+@import '../_scss/reset/_reset';
+@import '../_scss/helpers/_media';
+@import '../_scss/helpers/_mixins';
+
+// ––––––––––––––Custom Styles
+html {
+  font-size: 100%;
+  font-size: $base-typography;
+  //MEDIA QUERY
+  @include media($m) {
+    font-size: $base-typography
+  }
+}
+body {
+  background: white;
+  height: 95vh;
+  max-height: 95vh;
+  
+  @include media($xxl) {
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+main {
+  font-size: 1em;
+  width: 100%; 
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  @include border-box;
+  background: white;
+
+  @include media($xxl) {
+    font-size: 1.5em
+  }
+}
+::selection {
+  color: white;
+  background: red;
+}
+ul, ol, figure {
+  @include no-space;
+
+  li {
+    @include no-space
+  }
+}
+
+
+

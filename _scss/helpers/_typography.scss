@@ -1,0 +1,39 @@
+// Typography
+
+h1{
+	color: black;
+}
+
+h2{
+	color: black;
+}
+
+h3{
+	color: black;
+}
+h4{
+	color: black;
+}
+
+p, li{
+	color: gray;
+}
+
+a{
+	transition: all .3s;
+	&:hover{
+		transition: all .3s;
+	}
+}
+
+blockquote{
+	p{
+		padding-left: .5rem;
+		font-style: italic;
+	}	
+}
+
+ul{
+	list-style: none;
+}
+

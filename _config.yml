@@ -1,0 +1,23 @@
+name: David Gallardo | Designer
+markdown: kramdown
+highlighter: rouge
+include: ["_pages"]
+exclude: [node_modules, gulpfile.js, package.json, CNAME, README.md]
+keep_files: [images]
+permalink: /:categories/:title/
+
+# PRE
+url: http://localhost:3000
+baseurl: ''
+
+# PRE-PROD
+url: https://davidgallardo.github.io
+baseurl: ''
+
+# PROD
+# url: http://dgallardo.com
+# baseurl: ''
+
+
+
+
