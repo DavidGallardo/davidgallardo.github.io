@@ -1,28 +1,65 @@
 // Typography
 
+h1,h2,h3,h4,h5,p,ul,li,a {
+	@include no-space;
+}
+
 h1{
-	color: black;
+	@include catamaran(700,2.2rem);
+	color: white;
+	line-height: 1.15;
 }
 
 h2{
-	color: black;
+	@include catamaran(700,2rem);
+	color: $grey-7;
+	line-height: 1.2;
 }
 
 h3{
-	color: black;
+	@include catamaran(800,2rem);
+	color: $grey-7;
+	line-height: 1.1;
 }
 h4{
-	color: black;
+	@include catamaran(700,1rem);
+	color: $grey-7;
+	line-height: 1.5;
 }
 
 p, li{
-	color: gray;
+	@include crimson(400,1rem);
+	color: $grey-6;
+	line-height: 1.3;
+	margin-bottom: 1rem;
 }
 
 a{
+	color: inherit;
+	text-decoration: none;
+	position: relative;
 	transition: all .3s;
-	&:hover{
+	
+	&:before{
+		content: '';
+		width: 100%;
+		height: 1px;
+		display: block;
+		background: $red;
+		position: absolute;
+		left: 0;
+		bottom: 3px;
+		opacity: 1;
 		transition: all .3s;
+	}
+	&:hover{
+		color: $red;
+		transition: all .3s;
+		&:before{
+			bottom: -2px;
+			opacity: 1;
+		}
+
 	}
 }
 

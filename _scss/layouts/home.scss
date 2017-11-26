@@ -1,0 +1,165 @@
+/////////////////////////////////////////
+//HomeHeader
+/////////////////////////////////////////
+.home-header {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: $grey-7;
+  padding-top: 6rem;
+}
+.white-block {
+  @include column(11, 12);
+  @include col-margin(1, 12);
+  padding: 1.5rem 0;
+  background: white;
+  box-shadow: -15px 0 0 white, 50px 0 0 white;
+  @include border-box;
+}
+.home-header_wrap {
+  @include out-container;
+  z-index: 1;
+
+  > .copy-block {
+    @include column(6, 12);
+    @include col-margin(1, 12);
+    padding-left: 1.5rem;
+    @include border-box;
+    margin-bottom: 8rem;
+  }
+  > .white-block {
+    height: 6rem;
+  }
+}
+.home-header_eyebrow {
+  @include column(6, 12);
+  @include col-margin(1, 12);
+  @include catamaran(300, 1rem);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 1rem;
+}
+.home-header_title {
+  margin-bottom: 2rem;
+}
+.home-header_btn {
+  position: relative;
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .8rem 1.4rem .7rem 1.4rem;
+  background: transparent;
+  @include catamaran(800, .8rem);
+  text-transform: uppercase;
+  color: white;
+  border-radius: $radius;
+  box-shadow: inset 0 0 0 3px white;
+  @include border-box;
+
+  &:before, &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: $red;
+    display: block;
+    left: -6px;
+    top: 6px;
+    border-radius: $radius;
+    transition: all .3s;
+  }
+  &:hover{
+  	color: white;
+	  &:after {
+	    left: 0px;
+	    top: 0px;
+	    transition: all .3s;
+	  }
+	  &:before {
+	    left: -10px;
+    	top: 10px;
+    	background:rgba(0,0,0,.2);
+	    transition: all .3s;
+	  }
+	}
+}
+.home-header_color-boxes {
+  width: 430px;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -65px;
+
+  > .grey-box {
+    width: 50%;
+    height: 310px;
+    background: $grey-6;
+    float: left;
+  }
+  > .red-box {
+    width: 50%;
+    height: 320px;
+    background: $red;
+    float: left;
+    margin-top: -60px;
+  }
+}
+.home-header_pattern {
+  width: 210px;
+  height: 145px;
+  display: block;
+  position: absolute;
+  right: 110px;
+  top: 0px;
+  background: transparent url('../images/ui/pattern-white.svg') top left no-repeat;
+}
+/////////////////////////////////////////
+//MyStory
+/////////////////////////////////////////
+.my-story {
+  background: $grey-6;
+}
+.my-story_wrap {
+  @include out-container;
+}
+.my-story_title {
+  @include column(6, 11);
+  @include col-margin(1, 11);
+  margin-bottom: 3rem;
+}
+.my-story_column-block {
+  @include column(9, 11);
+  @include col-margin(1, 11);
+  margin-bottom: 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  box-shadow: inset 5px 0 0 $dividers;
+
+  .my-story_column {
+    @include border-box;
+
+    > p {
+      padding-left: .4rem;
+      @include border-box;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  > .column-left {
+    width: 5 / 9 * 100%;
+
+    > p {
+      width: 4 / 5 * 100%;
+      margin-left: .4 / 5 * 100%;
+    }
+  }
+  > .column-right {
+    width: 4 / 9 * 100%;
+  }
+}

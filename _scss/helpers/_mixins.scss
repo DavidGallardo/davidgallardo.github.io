@@ -12,7 +12,6 @@ $l: min-width $bp-large;
 $xl: min-width $bp-xlarge;
 $xxl: min-width $bp-xxlarge;
 
-
 // Colors
 $grey-1: #F5F7FA;
 $grey-2: #D8DDE6;
@@ -36,13 +35,8 @@ $pink: #FF3F6E;
 
 // Variables
 $base-typography: 20px;
-$max-width: 1200px;
-$radius: 4px;
-$shadow: 0 40px 50px rgba(0,0,50,.05);
-$hard-shadow: 0 15px 40px rgba(0,0,50,.15);
-$soft-shadow: 0 10px 50px rgba(0,0,50,.15);
-$shadow-hover: 0 20px 50px rgba(0,0,50,.08);
-$cell-shadow: 0 5px 50px rgba(0,0,50,.06);
+$max-width: 1440px;
+$radius: 2px;
 
 
 //Helpers in layout
@@ -51,13 +45,6 @@ $cell-shadow: 0 5px 50px rgba(0,0,50,.06);
 *zoom:1; }
 @mixin border-box { box-sizing: border-box; }
 @mixin no-space { margin: 0; padding: 0; }
-@mixin out-container{
-  width: 100%;
-  max-width: $max-width;
-  position: relative;
-  margin: 0 auto;
-  @include clearfix;
-}
 
 
 //Typography
@@ -66,20 +53,48 @@ $cell-shadow: 0 5px 50px rgba(0,0,50,.06);
    -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin open($weight, $size) {
-  font-family: 'Open Sans', Helvetica, sans-serif; 
+@mixin crimson($weight, $size) {
+  font-family: 'Crimson Text', Georgia, serif; 
   font-weight: $weight; 
   font-size: $size; 
   @include smoothy;
 }
 
-@mixin rubik($weight, $size) {
-  font-family: 'Rubik', Helvetica, sans-serif; 
+@mixin catamaran($weight, $size) {
+  font-family: 'Catamaran', Helvetica, sans-serif; 
   font-weight: $weight; 
   font-size: $size; 
   @include smoothy;
 }
 
+//Grid Mixins
+@mixin out-container{
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 1rem;
+  position: relative;
+  margin: 0 auto;
+  @include border-box;
+  @include clearfix; 
+
+  @include media($l){
+    padding: 0 2.5rem;
+
+  }
+}
+
+@mixin column($width, $number){
+  width: $width / $number * 100%;
+  position: relative;
+  float: left;
+}
+@mixin col-margin($width, $number){
+  margin-left: $width / $number * 100%;
+}
+
+.out-container{
+  @include out-container;
+}
 
 //Animations
 .animated{animation-duration:0s;//MEDIA QUERY
