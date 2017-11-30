@@ -2,6 +2,7 @@
 $bp-small: 23.43em;  // 375px
 $bp-medium: 48em;    // 768px
 $bp-large: 64em;     // 1024px
+$bp-largex: 80.1em;     // 1281px
 $bp-xlarge: 90.1em;  // 1441px
 $bp-xxlarge: 120em;  // 1920px
 
@@ -9,33 +10,40 @@ $bp-xxlarge: 120em;  // 1920px
 $s: min-width $bp-small;
 $m: min-width $bp-medium;
 $l: min-width $bp-large;
+$lx: min-width $bp-largex;
 $xl: min-width $bp-xlarge;
 $xxl: min-width $bp-xxlarge;
 
 // Colors
-$grey-1: #F5F7FA;
-$grey-2: #D8DDE6;
+$grey-1: #F7F9FC;
+$grey-2: #F0F2F5;
 $grey-3: #C0C5CC;
 $grey-4: #909399;
 $grey-5: #606266;
 $grey-6: #484A4D;
-$grey-7: #303234;
+$grey-7: #2C3739;
 $dividers: $grey-2;
+$placeholders: $grey-1;
 
 $red: #FF4C4F;
 $orange: #FCAF56;
 $yellow: #FFE04A;
-$green: #3BE66F;
+$green: #39EF9F;
 $blue: #576FF3;
 $dark-blue: #073288;
 $sky-blue: #8EDCF8;
 $purple: #A98FC1;
 $pink: #FF3F6E;
 
+$main: $green;
+$text: $grey-6;
+$title: $grey-7;
 
 // Variables
 $base-typography: 20px;
 $max-width: 1440px;
+$max-width: 1280px;
+
 $radius: 2px;
 
 
@@ -53,13 +61,6 @@ $radius: 2px;
    -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin crimson($weight, $size) {
-  font-family: 'Crimson Text', Georgia, serif; 
-  font-weight: $weight; 
-  font-size: $size; 
-  @include smoothy;
-}
-
 @mixin catamaran($weight, $size) {
   font-family: 'Catamaran', Helvetica, sans-serif; 
   font-weight: $weight; 
@@ -71,7 +72,7 @@ $radius: 2px;
 @mixin out-container{
   width: 100%;
   max-width: $max-width;
-  padding: 0 1rem;
+  padding: 0;
   position: relative;
   margin: 0 auto;
   @include border-box;
@@ -85,13 +86,13 @@ $radius: 2px;
 
 @mixin column($width, $number){
   width: $width / $number * 100%;
+  margin-right: 1rem;
   position: relative;
   float: left;
 }
-@mixin col-margin($width, $number){
-  margin-left: $width / $number * 100%;
+@mixin omega{
+  margin-right: 0;
 }
-
 .out-container{
   @include out-container;
 }
@@ -117,11 +118,42 @@ $radius: 2px;
 }
 .fadeInDown { animation-name: fadeInDown; }
 
-.fromBottomIn { @include media($l){ transition: all 1s; transform: translate3d(0, 0px, 0); opacity: 1.0; } }
+@keyframes slideInUp {
+  from {  transform: translate3d(0, 100%, 0); }
+  to {  transform: none; }
+}
+.slideInUp { animation-name: slideInUp; }
 
-.fromBottomOut { @include media($l){ transition: all 1s; transform: translate3d(0, 50px, 0); opacity: 1.0; } }
+@keyframes slideInDown {
+  from {  transform: translate3d(0, -100%, 0); }
+  to {  transform: none; }
+}
+.slideInDown { animation-name: slideInDown; }
 
+@keyframes scaleInleft {
+  from {  transform:scaleX(0); }
+  to {  transform:scaleX(1); }
+}
+.scaleInleft { animation-name: scaleInleft;
+transform-origin: 0% 0% ; }
 
+@keyframes slideInRight{
+  from {  transform: translate3d(100%, 0, 0); }
+  to {  transform: none; }
+}
+.slideInRight { animation-name: slideInRight; }
 
+.delay-2 {
+  animation-delay: .2s
+}
+.delay-3 {
+  animation-delay: .3s
+}
+.delay-4 {
+  animation-delay: .4s
+}
+.delay-5 {
+  animation-delay: .5s
+}
 
 

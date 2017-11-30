@@ -1,0 +1,91 @@
+/////////////////////////////////////////
+//HomeHeader
+/////////////////////////////////////////
+.wrap {
+  @include out-container;
+}
+/////////////////////////////////////////
+// Specific Styles
+/////////////////////////////////////////
+.hm-header {
+  width: 100%;
+  max-width: $max-width;
+  height: 770px;
+  display: block;
+  position: relative;
+  background: white;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  @include media($lx) {
+    margin-top: 3.5rem;
+  }
+}
+.box-wrap{
+  width: 100%;  
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  @include border-box;
+}
+.header-box_dark{
+  width: 50%;
+  height: 680px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #292A2B;
+  border-left: 2.5rem solid white;
+  @include border-box;
+
+  @include media($lx) {
+    border-left: 1.5rem solid white;
+  }
+}
+.header-box_light{
+  width: 50%;
+  height: 750px;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background: #2E2F30 url('../images/ui/header-illustration.svg') bottom right no-repeat;
+  background-size: cover;
+  border-right: 2.5rem solid white;
+  @include border-box;
+
+  @include media($lx) {
+    border-right: 1.5rem solid white;
+  }
+}
+
+.header-eyebrow{
+  @include column(7,12);
+  margin-top: 8rem;
+  margin-left: 1/12*100%;
+  margin-bottom: 2.5rem;
+  > span{
+    @include catamaran(800, 1rem);
+    color: $main;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    background:#242526;
+    border: 1px solid $main;
+    border-radius: 2px;
+    padding: .2rem .5rem .1rem .5rem;
+    margin-left: 2px;
+  }
+}
+.header-title{
+  @include column(7,12);
+  margin-left: 1/12*100%;
+  > .arrow{
+    width: 9px;
+    height: 90px;
+    display: block;
+    position: absolute;
+    background:transparent url('../images/ui/down-arrow.svg') left top no-repeat;
+    bottom: -10rem;
+    left: .5rem;
+  }
+}
