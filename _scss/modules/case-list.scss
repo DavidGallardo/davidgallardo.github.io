@@ -19,7 +19,7 @@
 			&:after{
 				content: '';
 		    width: 100%;
-		    height: 10px;
+		    height: 18px;
 		    position: absolute;
 		    bottom: 20px;
 		    left: 0;
@@ -82,10 +82,12 @@
 	.item_image-block_01{
 		background-image: url('../images/cases/01/homepage@2x.png');
 		background-position: left top;
+		background-repeat: no-repeat;
 	}
 	.item_image-block_02{
 		background-image: url('../images/cases/02/homepage@2x.png');
 		background-position: right top;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -102,7 +104,7 @@
 	}
 	.item_copy-block{
 		@include column(5, 12);
-		margin-left: 3.25/12*100%;
+		margin-left: 3/12*100%;
  		margin-top: 2.5rem;
 	}	
 }
@@ -111,7 +113,7 @@
 	padding-bottom: 7.5rem;
 
 	> .item_image-block{
-		@include column(6, 12);
+		@include column(6.3, 12);
  		margin-left: 0%;
  		border-radius: 0 20px 20px 0;
 	}
@@ -122,8 +124,8 @@
 		top: 4rem;
 	}
 	.item_copy-block{
-		@include column(4.5, 12);
- 		margin-left: 0.5/12*100%;
+		@include column(5, 12);
+ 		margin-left: 0.4/12*100%;
  		margin-top: 25rem;
  		@include omega;
 	}	
