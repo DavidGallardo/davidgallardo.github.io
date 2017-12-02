@@ -2,7 +2,7 @@
 $bp-small: 23.43em;  // 375px
 $bp-medium: 48em;    // 768px
 $bp-large: 64em;     // 1024px
-$bp-largex: 80.1em;     // 1281px
+$bp-largex: 80.1em;  // 1281px
 $bp-xlarge: 90.1em;  // 1441px
 $bp-xxlarge: 120em;  // 1920px
 
@@ -96,16 +96,34 @@ $radius: 2px;
 .out-container{
   @include out-container;
 }
+.hidden{
+  opacity: 0;
+}
 
 //Animations
 .animated{animation-duration:0s;//MEDIA QUERY
   @include media($m){animation-duration:1s;animation-fill-mode:both}}
+
+.faded{
+  opacity: 1;
+  animation-duration:0s;//MEDIA QUERY
+  @include media($m){
+    opacity: 0;
+    animation-duration:1s;
+    animation-fill-mode:both
+  }
+}
 .animated.infinite {  animation-iteration-count: infinite; }
 .animated.hinge { animation-duration: .5s; }
-@-webkit-keyframes fadeInUp {
-  from { opacity: 0; transform: translate3d(0, 100%, 0); }
-  to { opacity: 1;  transform: none; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+.fadeIn { 
+  animation-name: fadeIn; 
+}
+
 @keyframes fadeInUp {
   from { opacity: 0;  transform: translate3d(0, 100%, 0); }
   to { opacity: 1; transform: none; }
@@ -117,6 +135,16 @@ $radius: 2px;
   to { opacity: 1; transform: none; }
 }
 .fadeInDown { animation-name: fadeInDown; }
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInLeft { animation-name: fadeInLeft; }
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInRight { animation-name: fadeInRight; }
 
 @keyframes slideInUp {
   from {  transform: translate3d(0, 100%, 0); }
@@ -130,18 +158,20 @@ $radius: 2px;
 }
 .slideInDown { animation-name: slideInDown; }
 
-@keyframes scaleInleft {
-  from {  transform:scaleX(0); }
-  to {  transform:scaleX(1); }
+@keyframes scaleInUp {
+  from {  transform:scaleY(0); }
+  to {  transform:scaleY(1); }
 }
-.scaleInleft { animation-name: scaleInleft;
+.scaleInUp { animation-name: scaleInUp;
+transform-origin: 0% 100% ; }
+
+@keyframes scaleInDown {
+  from {  transform:scaleY(0); }
+  to {  transform:scaleY(1); }
+}
+.scaleInDown { animation-name: scaleInDown;
 transform-origin: 0% 0% ; }
 
-@keyframes slideInRight{
-  from {  transform: translate3d(100%, 0, 0); }
-  to {  transform: none; }
-}
-.slideInRight { animation-name: slideInRight; }
 
 .delay-2 {
   animation-delay: .2s
@@ -154,6 +184,12 @@ transform-origin: 0% 0% ; }
 }
 .delay-5 {
   animation-delay: .5s
+}
+.delay-6 {
+  animation-delay: .6s
+}
+.delay-7 {
+  animation-delay: .7s
 }
 
 

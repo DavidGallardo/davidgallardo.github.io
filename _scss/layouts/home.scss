@@ -1,36 +1,94 @@
-
 @import '../modules/header-home';
 
 /////////////////////////////////////////
 //MyStory
 /////////////////////////////////////////
 .story {
-  background: white;
-  margin-top: 7.5rem;
+  margin-top: 3rem;
+
+  @include media($m) {
+    margin-top: 5rem;
+  }
+  @include media($l) {
+    margin-top: 7.5rem;
+  }
 }
 .story_title {
-  @include column(5, 12);
-  margin-left: 1/12*100%;
+  @include column(12, 12);
   text-transform: uppercase;
   margin-bottom: 2rem;
+
+  @include media($m) {
+    @include column(6, 12);
+    margin-left: .5/12*100%;
+  }
+  @include media($l) {
+    @include column(5, 12);
+    margin-left: 1/12*100%;
+  }
+  @include media($lx) {
+    margin-left: 1/12*100%;
+  }
 }
 .story_column-block {
-  @include column(11, 12);
-  margin-left: 1/12*100%;
-  margin-bottom: 7.5rem;
+  @include column(12, 12);
+  margin-bottom: 3rem;
+
+  @include media($m) {
+    @include column(11.5, 12);
+    margin-left: .5/12*100%;
+    margin-bottom: 7.5rem;
+  }
+  @include media($l) {
+    @include column(11, 12);
+    margin-left: 1/12*100%;
+  }
+  @include media($lx) {
+    @include column(11, 12);
+    margin-left: 1/12*100%;
+  }
 }
 .story_column {
-  @include column(3.5, 11);
+  @include column(12, 12);
   @include border-box;
-  margin-right: .5 / 11 * 100%;
+
+  @include media($m) {
+    @include column(5, 11);
+    margin-right: .5 / 11 * 100%;
+  }
+  @include media($l) {
+    @include column(3.5, 11);
+    margin-right: .5 / 11 * 100%;
+  }
 }
 .story_column_small {
-  @include column(3, 11);
+  @include column(12, 12);
   margin-left: 0%;
+  margin-top: 1rem;
   @include omega;
   @include border-box;
-  padding-left: 1rem;
-	border-left: 1px solid $main;
+  padding-left: 0rem;
+  padding-top: 2rem;
+  border-left: 0;
+  border-top: 1px solid $dividers;
+
+  @include media($m) {
+    @include column(4, 11);
+    padding-left: 0rem;
+    padding-top: 2rem;
+    border-left: 0;
+    border-top: 1px solid $main;
+    
+  }
+  @include media($l) {
+    @include column(3, 11);
+    margin-left: 0%;
+    @include omega;
+    padding-top: 0;
+    padding-left: 1rem;
+    border-left: 1px solid $main;
+    border-top: 0;
+  }
 }
 .list_item{
 	font-weight: 700;
@@ -51,9 +109,18 @@
 /////////////////////////////////////////
 
 .showcase_title {
-  @include column(6, 12);
-  margin-left: 2/12*100%;
-  margin-top: 4rem;
+  @include column(12, 12);
+  margin-left: 0;
+  margin-top: 2rem;
+  
+  @include media($m) {
+    margin-left: 2/12*100%;
+    @include column(8, 12);
+    margin-top: 4rem;
+  }
+  @include media($l) {
+    @include column(6, 12);
+  }
 
   > h2 {
     margin-bottom: 1.2rem;
@@ -71,6 +138,14 @@
   background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
   top: 8rem;
   right: 6rem;
+  @include media($m) {
+    top: 8rem;
+    right: 3rem;
+  }
+  @include media($l) {
+    top: 8rem;
+    right: 6rem;
+  }
 }
 
 @import '../modules/case-list';
@@ -80,23 +155,49 @@
 /////////////////////////////////////////
 
 .example-grid{
-
-  margin: 7.5rem auto;
+  margin: 2rem auto;
   @include clearfix;
 
+  @include media($m) {
+    margin: 7.5rem auto;
+  }
+
     .grid-row{
-      margin-bottom: 3rem;
+      margin-bottom: 0;
        @include clearfix;
+
+       @include media($m) {
+          margin-bottom: 3rem;
+        }
     }
 
    .grid-item{
     position: relative;
+    margin-bottom: 0rem;
+
+    .item-image{
+      margin-top: 2rem;
+      @include media($m) {
+        margin-top: 0;
+      }
+    }
     
     .item-copy{
-      position: absolute;
+      position: relative;
       display: block;
-      width: 10.5rem;
+      width: 80%;
       height: auto;
+      text-align: left;
+      margin-top: 2rem;
+      padding-left: 1rem;
+      
+      @include media($m) {
+        position: absolute;
+        display: block;
+        width: 10.5rem;
+        margin-top: 0;
+      }
+
       &:after{
         content: '';
         width: 1rem;
@@ -113,53 +214,94 @@
   }
    .item-01{
     .item-copy{
-      bottom: 1rem;
-      right: -11.5rem;
+      
+      @include media($m) {
+        bottom: 1rem;
+        right: -11.5rem;
+      }
     }
     .item-image{
-      @include column(7,12);
-      margin-left: 1/12*100%;
+      @include column(12,12);
+      margin-left: 0%;
+
+      @include media($m) {
+        @include column(7,12);
+        margin-left: 1/12*100%;
+      }
     }
   }
    .item-02{
     .item-copy{
-      bottom: -4.5rem;
-      left: 0rem;
+     
+      @include media($m) {
+        bottom: -4.5rem;
+        left: 0rem;
+      }
     }
     .item-image{
-      @include column(5,12);
+      @include column(12,12);
       margin-left: 0;
-      padding-top: 15rem;
+      padding-top: 0;
+      
+      @include media($m) {
+        @include column(5,12);
+        margin-left: .5/12*100%;
+        padding-top: 15rem;
+      }
+      @include media($l) {
+        @include column(4.5,12);
+        margin-left: .5/12*100%;
+      }
     }
   }
    .item-03{
     .item-copy{
-      top: 8rem;
-      left: -11.5rem;
-      text-align: right;
-      &:after{
-        right: 0;
+      
+      @include media($m) {
+        top: 8rem;
+        left: -12.5rem;
+        text-align: right;
+        &:after{
+          right: 0;
+        }
       }
+      
     }
     .item-image{
-      @include column(6,12);
-      margin-left: .5/12*100%;
-      @include omega;
+      @include column(12,12);
+      margin-left: 0%;
+
+      @include media($m) {
+        @include column(5.5,12);
+        margin-left: .5/12*100%;
+        @include omega;
+      }
+      @include media($l) {
+        @include column(6,12);
+        margin-left: .5/12*100%;
+      }
     }
   }
   .item-04{
     .item-copy{
-      width: 11.5rem;
-      bottom: -4.5rem;
-      right: 0rem;
-      text-align: right;
-      &:after{
-        right: 0;
+
+      @include media($m) {
+        width: 11.5rem;
+        bottom: -4.5rem;
+        right: 0rem;
+        text-align: right;
+        &:after{
+          right: 0;
+        }
       }
     }
     .item-image{
-      @include column(7,12);
-      margin-left: 3/12*100%;
+      @include column(12,12);
+      margin-left: 0%;
+      @include media($m) {
+        @include column(7,12);
+        margin-left: 3/12*100%;
+      }
     }
   }
 }
@@ -171,13 +313,21 @@
 
 .contact{
   text-align: center;
-  margin: 12rem 0 6rem 0;
+  margin: 6rem 0;
+  @include media($m) {
+    margin: 12rem 0 6rem 0;
+  }
 }
 .contact-cta{
     span{
       position: relative;
-      @include catamaran(800, 2rem);
+      @include catamaran(800, 1.5rem);
       z-index: 1;
+
+      @include media($m) {
+        @include catamaran(800, 2rem);
+      }
+
       > span{
         display: none;
       }
@@ -186,11 +336,17 @@
         width: 100%;
         height: 10px;
         position: absolute;
-        bottom: 16px;
+        bottom: 12px;
         left: 0;
         background:$main;
         z-index: -1;
         transition: all .3s;  
+
+        @include media($m) {
+          height: 10px;
+          position: absolute;
+          bottom: 16px;
+        }
       }
     }
     &:hover span:after{
