@@ -313,12 +313,14 @@
 
 .contact{
   text-align: center;
+  display: block;
   margin: 6rem 0;
   @include media($m) {
     margin: 12rem 0 6rem 0;
   }
 }
 .contact-cta{
+
     span{
       position: relative;
       @include catamaran(800, 1.5rem);
