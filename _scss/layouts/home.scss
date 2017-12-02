@@ -130,14 +130,14 @@
     margin-bottom: 0;
   }
 }
-.green_pattern{
+.green-pattern{
   width: 204px;
   height: 144px;
   display: block;
   position: absolute;
   background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
-  top: 8rem;
-  right: 6rem;
+  top: 0rem;
+  right: 1rem;
   @include media($m) {
     top: 8rem;
     right: 3rem;
@@ -145,6 +145,19 @@
   @include media($l) {
     top: 8rem;
     right: 6rem;
+  }
+}
+
+.green-pattern_first{
+  top: -2rem;
+  right: 1rem;
+  @include media($m) {
+    top: -2rem;
+    right: 3rem;
+  }
+  @include media($l) {
+    top: -4rem;
+    right: 13rem;
   }
 }
 

@@ -46,13 +46,17 @@
       &:after {
         content: '';
         width: 100%;
-        height: 18px;
+        height: 12px;
         position: absolute;
-        bottom: 20px;
+        bottom: 14px;
         left: 0;
         background: $main;
         z-index: -1;
         transition: all .3s;
+        @include media($m) {
+          height: 18px;
+          bottom: 20px;
+        }
       }
     }
     &:hover span:after {
@@ -127,8 +131,12 @@
   }
   .item_image-block_01 {
     background-image: url('../images/cases/01/homepage@2x.png');
-    background-position: left top;
+    background-position: -3rem top;
     background-repeat: no-repeat;
+    @include media($m) {
+     background-position: left top;
+    }
+
   }
   .item_image-block_02 {
     background-image: url('../images/cases/02/homepage@2x.png');
@@ -213,7 +221,7 @@
       margin-left: 2/12*100%;
     }
     @include media($l) {
-      margin-left: 0.4/12*100%;
+      margin-left: 0.3/12*100%;
       margin-top: 25rem;
       @include omega;
     }

@@ -15,12 +15,13 @@
 .hm-header {
   width: 100%;
   max-width: $max-width;
-  height: 520px;
+  height: 420px;
   display: block;
   position: relative;
   background: white;
   margin: 0 auto;
   margin-top: .5rem;
+
   @include media($m) {
     height: 680px;
     margin-top: 1rem;
@@ -44,7 +45,7 @@
 }
 .header-box_dark{
   width: 50%;
-  height: 480px;
+  height: 400px;
   position: relative;
   top: 0;
   left: 0;
@@ -66,7 +67,7 @@
 }
 .header-box_light{
   width: 50%;
-  height: 480px;
+  height: 400px;
   position: absolute;
   top: .5rem;
   right: 0;
@@ -95,7 +96,9 @@
     background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
     bottom: -2rem;
     left: -5rem;
+    display: none;
     @include media($m) {
+      display: block;
       bottom: auto;
       left: auto;
       top: 4rem;
