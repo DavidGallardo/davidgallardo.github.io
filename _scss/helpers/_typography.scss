@@ -4,23 +4,22 @@ h1, h2, h3, h4, h5, p, ul, li, a {
   @include no-space;
 }
 h1 {
-  @include catamaran(300, 1.6rem);
+  @include catamaran(700, 1.7rem);
   color: white;
   line-height: 1.08;
 
   @include media($s) {
-    @include catamaran(300, 1.8rem);
-    line-height: 1.08;
+    @include catamaran(800, 1.7rem);
   }
   @include media($m) {
-    @include catamaran(700, 2.25rem);
+    @include catamaran(800, 2.25rem);
   }
   @include media($l) {
     @include catamaran(800, 2.5rem);
   }
 }
 h2 {
-  @include catamaran(900, 1.8rem);
+  @include catamaran(900, 1.6rem);
   color: $title;
   line-height: 1.125;
   
@@ -31,7 +30,7 @@ h2 {
 
 }
 h3 {
-  @include catamaran(900, 1.6rem);
+  @include catamaran(900, 1.4rem);
   color: $title;
   line-height: 1.125;
 

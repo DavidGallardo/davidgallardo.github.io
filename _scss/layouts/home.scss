@@ -4,7 +4,7 @@
 //MyStory
 /////////////////////////////////////////
 .story {
-  margin-top: 3rem;
+  margin-top: 2rem;
 
   @include media($m) {
     margin-top: 5rem;
@@ -84,6 +84,7 @@
     @include column(3, 11);
     margin-left: 0%;
     @include omega;
+    margin-top: 0;
     padding-top: 0;
     padding-left: 1rem;
     border-left: 1px solid $main;
@@ -131,14 +132,17 @@
   }
 }
 .green-pattern{
-  width: 204px;
-  height: 144px;
+  width: 142px;
+  height: 100px;
   display: block;
   position: absolute;
   background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
+  background-size: 100%;
   top: 0rem;
   right: 1rem;
   @include media($m) {
+    width: 204px;
+    height: 144px;
     top: 8rem;
     right: 3rem;
   }
@@ -149,7 +153,7 @@
 }
 
 .green-pattern_first{
-  top: -2rem;
+  top: -1rem;
   right: 1rem;
   @include media($m) {
     top: -2rem;
@@ -313,7 +317,56 @@
       margin-left: 0%;
       @include media($m) {
         @include column(7,12);
+        margin-left: 4/12*100%;
+      }
+      @include media($l) {
+        @include column(7,12);
         margin-left: 3/12*100%;
+      }
+    }
+  }
+  .item-05{
+    .item-copy{
+      @include media($m) {
+        bottom: -4.5rem;
+        left: 0rem;
+      }
+    }
+    .item-image{
+      @include column(12,12);
+      margin-left: 0;
+      padding-top: 0;
+      
+      @include media($m) {
+        @include column(6,12);
+        margin-left: .5/12*100%;
+      }
+      @include media($l) {
+        @include column(5.5,12);
+        margin-left: .5/12*100%;
+      }
+    }
+  }
+  .item-06{
+    .item-copy{
+      @include media($m) {
+        bottom: -4.5rem;
+        left: 0rem;
+      }
+    }
+    .item-image{
+      @include column(12,12);
+      margin-left: 0;
+      padding-top: 0;
+      
+      @include media($m) {
+        @include column(4,12);
+        margin-left: .5/12*100%;
+        padding-top: 15rem;
+      }
+      @include media($l) {
+        @include column(4.5,12);
+        margin-left: .5/12*100%;
       }
     }
   }
@@ -328,6 +381,7 @@
   text-align: center;
   display: block;
   margin: 6rem 0;
+  @include clearfix;
   @include media($m) {
     margin: 12rem 0 6rem 0;
   }

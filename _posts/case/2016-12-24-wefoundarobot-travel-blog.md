@@ -8,7 +8,7 @@ title:       "We Found A Robot – Travel Blog"
 tags:        [Wefoundarobot, blog, jekyll]
 type:        "Responsive Web Design | Developed by myself | Jekyll + GithubPages"
 
-excerpt:      "Because it's been a very long trip and we didn't want to lose any detail or cool story, we decided to start blogging about our journey. It started as a small personal project, but we wanted to return to the internet so why not sharing our knowledge with others? "
+excerpt:      "Because it's been a very long trip and we didn't want to lose any detail or cool story, we decided to start blogging about our journey. It started as a small personal project, but we wanted to return to the internet so, why not sharing our knowledge with others?"
 ---
 
 # Title

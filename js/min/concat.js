@@ -192,6 +192,11 @@ $( document ).ready(function() {
 	        scrollTop: $("#story").offset().top -100
 	    }, 800);
 	});
+	// $("#company").click(function() {
+	//     $('html, body').animate({
+	//         scrollTop: $("#contact").offset().top -100
+	//     }, 800);
+	// });
   $(window).bind("mousewheel", function() {
      $("html, body").stop(true, false);;
   });

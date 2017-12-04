@@ -35,8 +35,8 @@ main {
   }
 }
 ::selection {
-  color: white;
-  background: $yellow;
+  color: black;
+  background: lighten($green, 20);
 }
 ul, ol, figure {
   @include no-space;
@@ -45,8 +45,6 @@ ul, ol, figure {
     @include no-space
   }
 }
-
-@import '../_scss/modules/buttons';
 
 
 
