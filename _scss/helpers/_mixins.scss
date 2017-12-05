@@ -96,9 +96,6 @@ $radius: 2px;
 .out-container{
   @include out-container;
 }
-.hidden{
-  opacity: 0;
-}
 
 //Animations
 .animated{animation-duration:0s;//MEDIA QUERY
@@ -109,7 +106,7 @@ $radius: 2px;
   animation-duration:0s;//MEDIA QUERY
   @include media($m){
     opacity: 0;
-    animation-duration:1s;
+    animation-duration:.5s;
     animation-fill-mode:both
   }
 }
@@ -123,7 +120,6 @@ $radius: 2px;
 .fadeIn { 
   animation-name: fadeIn; 
 }
-
 @keyframes fadeInUp {
   from { opacity: 0;  transform: translate3d(0, 100%, 0); }
   to { opacity: 1; transform: none; }
