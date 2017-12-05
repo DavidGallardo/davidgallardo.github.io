@@ -305,7 +305,7 @@
       @include media($m) {
         width: 11.5rem;
         bottom: -4.5rem;
-        right: 0rem;
+        right: 1rem;
         text-align: right;
         &:after{
           right: 0;
@@ -380,10 +380,11 @@
 .contact{
   text-align: center;
   display: block;
-  margin: 6rem 0;
+  padding: 6rem 0;
   @include clearfix;
   @include media($m) {
-    margin: 12rem 0 6rem 0;
+    padding: 8rem 0 6rem 0;
+    display: block;
   }
 }
 .contact-cta{
