@@ -21,7 +21,7 @@
   background: white;
   margin: 0 auto;
   z-index: 1;
-  padding: 3rem 0 9rem 0;
+  padding: 7rem 0 12rem 0;
   overflow: hidden;
 
   @include media($m) {
@@ -45,7 +45,7 @@
     transform: rotate(-8deg);
     transform-origin: 8% 0;
     top: 0;
-    left: -25%;
+    left: -28%;
     z-index: -1;
     width: 150%;
     height: 90%;
