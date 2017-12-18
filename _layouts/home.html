@@ -45,7 +45,7 @@ layout: default
   </section>
   <section id="showcase" class="showcase">
     <div class="wrap">
-      <div class="green-pattern faded"></div>
+      <div class="green-pattern"></div>
       <div class="showcase_title  faded">
         <h2>Showcase of recent projects.</h2>
       </div>
@@ -54,7 +54,7 @@ layout: default
       <ul class="showcase-block">
         {% for post in site.categories.case limit:10 %}
           {% if post.number == "01" %}
-            <li id="seat-case" class="showcase_item faded">
+            <li id="seat-case" class="showcase_item">
               <div class="item_title title_mobile">
                   <a href="http://www.seat.com"><h3><span>SEAT </span> <span>GLOBAL </span> <span>WEBSITE </span> <span>&amp; </span> <span>CAR</span> <span>CONFIG</span></h3></a>
                 </div>
@@ -77,7 +77,7 @@ layout: default
               <div class="item_title title_mobile">
                   <a href="https://www.wefoundarobot.com" target="_blank" rel="noopener noreferrer"><h3><span>WE </span> <span>FOUND </span> <span>A </span> <span>ROBOT </span> <span>- </span><span>TRAVEL </span> <span>BLOG</span></h3></a>
                 </div>
-              <div class="item_image-block item_image-block_{{ post.number }} faded">
+              <div class="item_image-block item_image-block_{{ post.number }}">
                 <div class="item_title title_desktop faded">
                   <a href="https://www.wefoundarobot.com"><h3><span>WE </span> <span>FOUND </span> <span>A </span> <span>ROBOT </span> <span>- </span><span>TRAVEL </span> <span>BLOG</span></h3></a>
                 </div>
@@ -152,3 +152,7 @@ layout: default
       </div>
     </div>
   </section>
+
+  {% include footer.html %}
+
+  <!-- <section class="dark">  </section> -->
