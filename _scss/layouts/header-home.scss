@@ -4,7 +4,6 @@
 .wrap {
   @include out-container;
   padding: 0 1rem;
-  // overflow: hidden;
   @include media($m) {
     padding: 0;
   }
@@ -18,25 +17,17 @@
   height: auto;
   display: block;
   position: relative;
-  background: white;
+  background: #242526;
   margin: 0 auto;
   z-index: 1;
   padding: 7rem 0 12rem 0;
   overflow: hidden;
 
   @include media($m) {
-    overflow: auto;
+    overflow: visible;
     background: white;
-    height: 680px;
-    margin-top: 1rem;
     padding: 0;
-  }
-  @include media($l) {
-    height: 770px;
-    margin-top: 2.5rem;
-  }
-  @include media($lx) {
-    margin-top: 3.5rem;
+    min-height: 680px;
   }
 
   &:before {
@@ -59,95 +50,70 @@
   } 
 }
 .box-wrap{
-  width: 100%;  
-  height: 100%;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include border-box;
-}
-.header-box_dark{
-  display: none;
-  width: 100%;
-  height: 100%;
+  width: 100%; 
+  min-height: 5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
   position: relative;
-  top: 0;
-  left: 0;
-  background: #292A2B;
+  background: #242526;
   @include border-box;
 
   @include media($m) {
-    display: block;
-    width: 50%;
-    height: 650px;
-    border-left: 1rem solid white;
-  }
-  @include media($l) {
-    height: 680px;
-    border-left: 2.5rem solid white;
-  }
-  @include media($lx) {
-    border-left: 1.5rem solid white;
+    box-shadow: inset 0 0 0 2.5rem white; 
+    height: 780px;
   }
 }
+
 .header-box_light{
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0rem;
-  right: 0;
-  background: #2E2F30;
-  @include border-box;
+  display: none;
 
   @include media($m) {
-    width: 50%;
-    top: 1rem;
-    height: 680px;
-    border-right: 1rem solid white;
+    height: 650px;
+    width: 45%;
+    position: absolute;
+    display: block;
+    background: #292A2B;
+    @include border-box;
+    top: 6rem;
+    right: 4rem;
   }
-  @include media($l) {
-    height: 750px;
-    border-right: 2.5rem solid white;
-  }
-  @include media($lx) {
-    border-right: 1.5rem solid white;
-  }
+
   
   > .green-pattern{
-    width: 101px;
-    height: 71px;
+    width: 140px;
+    height: 140px;
     display: block;
     position: absolute;
-    background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
+    background:transparent url('../images/ui/green-ptr.svg') left top no-repeat;
     background-size: 100%;
     bottom: -2rem;
     left: -5rem;
     display: none;
     @include media($m) {
-      width: 202px;
-      height: 142px;
+      width: 140px;
+      height: 140px;
       display: block;
       bottom: auto;
       left: auto;
-      top: 4rem;
-      right: 30%;
+      top: -2rem;
+      right: 3rem;
     }
   }
 
   > .arrow{
-    width: 1rem;
-    height: 90px;
-    display: block;
-    position: absolute;
-    background:transparent url('../images/ui/down-arrow.svg') left top no-repeat;
-    bottom: 8rem;
-    right: 45%;
     display: none;
-    transition: all .3s;
 
     @include media($m) {
+      width: 1rem;
+      height: 90px;
       display: block;
+      position: absolute;
+      background:transparent url('../images/ui/green-arw.svg') left top no-repeat;
+      bottom: 6rem;
+      right: 45%;
+      transition: all .3s;
+      z-index: 3;
     }
 
     &:after, &:before{
@@ -155,51 +121,94 @@
     }
 
     &:hover{
-      bottom: 7.8rem;
+      bottom: 5.8rem;
       transition: all .3s;
     }
   }
 }
 
-.header-eyebrow{
-  @include column(12,12);
-  margin-bottom: 1.5rem;
-
-  @include media($m) {
-    @include column(7,12);
-    margin-top: 11rem;
-    margin-left: 1/12*100%;
-    margin-bottom: 2.5rem;
-    text-align: left;
-  }
-
-  > span{
-    @include catamaran(800, .8rem);
-    color: $main;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
-    border: 1px solid $main;
-    border-radius: 2px;
-    padding: .1rem .5rem .05rem .5rem;
-    margin-left: 2px;
-    @include media($m) {
-      @include catamaran(800, 1rem);
-      padding: .2rem .5rem .1rem .5rem;
-    }
-  }
-}
 .header-title{
   @include column(11.5,12);
   margin-left: 0rem;
+  position: relative;
+  z-index: 1;
 
   @include media($m) {
     @include column(8,12);
-    margin-left: 1/12*100%;
-    text-align: left;
+    margin-top: 13rem;
+    margin-left: 2.5/12*100%;
+    text-transform: uppercase;
+    letter-spacing: 30px;
   }
   @include media($l) {
-    @include column(7,12);
+
   }
 
+  &:after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: block;
+    background:transparent;
+    border: 1px solid $main;
+    top: -70px;
+    left: -110px;
+    z-index: -1;
+  }
+   &:before{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: block;
+    background:transparent;
+    border: 1px solid #484A4D;
+    top: -40px;
+    left: -80px;
+    z-index: -1;
+  }
+
+  span{
+    display: block;
+    position: relative;
+    margin-bottom: .6rem;
+  }
+  .name{
+
+  }
+  .surname{ 
+    margin-left: 4rem;
+
+    &:before{
+      content: '';
+      width: 90px;
+      height: 10px;
+      display: block;
+      position: absolute;
+      background:transparent url('../images/ui/white-arw.svg') left center no-repeat;
+      left: -120px;
+      top: 18px;
+    }
+  }
+}
+
+.header-description{
+
+  @include media($m) {
+    @include column(4.5,12);
+    margin-top: 5.5rem;
+    margin-left: 2.25/12*100%;
+    letter-spacing: 5px;
+  }
+  @include media($l) {
+    @include column(3.25,12);
+  }
+
+  p{
+    color: $grey-4;
+    @include catamaran(300, 1rem);
+    line-height: 1.25;
+  }
 
 }
