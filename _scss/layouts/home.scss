@@ -71,7 +71,7 @@
   @include clearfix;
 
   @include media($m) {
-    margin: 7.5rem auto;
+    margin: 7.5rem auto 9.5rem auto;
   }
 
     .grid-row{
@@ -273,13 +273,17 @@
 /////////////////////////////////////////
 
 .contact{
+
+}
+
+.email{
   text-align: center;
   display: block;
   padding: 3rem 0;
   @include clearfix;
   border-top: 1px solid $dividers;
   @include media($m) {
-    padding: 8rem 0 6rem 0;
+    padding: 4rem 0 4rem 0;
     display: block;
   }
 }
@@ -322,12 +326,15 @@
       transition: all .3s;
     }
 }
+.social-media{
+  height: 130px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background:#292A2B;
+}
 
-/////////////////////////////////////////
-//Dark Section
-/////////////////////////////////////////
 
-@import 'modules/dark';
 
 
 

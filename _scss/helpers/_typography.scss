@@ -4,13 +4,9 @@ h1, h2, h3, h4, h5, p, ul, li, a {
   @include no-space;
 }
 h1 {
-  @include catamaran(700, 1.7rem);
+  @include catamaran(900, 1.7rem);
   color: white;
   line-height: 1.08;
-
-  @include media($s) {
-    @include catamaran(800, 1.7rem);
-  }
   @include media($m) {
     @include catamaran(800, 2.25rem);
   }
