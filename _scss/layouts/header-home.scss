@@ -19,7 +19,6 @@
   background: #fff;
   margin: 0 auto;
   z-index: 1;
-  padding: 5rem 0 7rem 0;
   overflow: hidden;
 
   @include media($m) {
@@ -30,15 +29,18 @@
 }
 .box-wrap{
   width: 100%; 
-  min-height: 5rem;
+  height: 360px;
   margin: 0 auto;
   display: block;
   position: relative;
+  padding: 0 1rem;
+  padding-top: 4rem;
   @include border-box;
   overflow: hidden;
 
   @include media($m) {
-    height: 600px;
+    height: 700px;
+    padding: 0;
   }
   @include media($l) {
     height: 750px;
@@ -46,77 +48,122 @@
 }
 
 .header-title{
-  position: relative;
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
 
   @include media($m) {
-    width: 600px;
-    height: 340px;
+    width: 490px;
+    height: 320px;
     position: absolute;
-    display: block;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%);
   }
   @include media($l) {
     width: 600px;
     height: 340px;
+    transform: translate(-50%, -60%);
   }
   
   .grey-box{
     content: '';
-    width: 1180px;
-    height: 750px;
+    width: 550px;
+    height: 450px;
     display: block;
     position: absolute;
-    background:$placeholders;
+    background: $placeholders;
     border-radius: 50px;
     transform: rotate(-15deg);
-    left: -180px;
-    top: -360px;
+    left: -30px;
+    top: -240px;
+
+    @include media($m) {
+      width: 1180px;
+      height: 750px;
+      left: -180px;
+      top: -400px;
+    }
+
+    @include media($l) {
+      left: -180px;
+      top: -360px;
+    }
 
     &.border{
       background: transparent;
       border: 2px solid $grey-3;
+      opacity: .1;
     }
+
+
   }
 
   > h1{
     display: block;
-    margin-left: 85px;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 4px;
+
+    @include media($m) {
+      margin-left: 60px;
+      margin-bottom: 1.5rem;
+    }
+    @include media($l) {
+      margin-left: 85px;
+    }
   }
 
   > .green-pattern{
-    width: 150px;
-    height: 145px;
+    width: 85px;
+    height: 85px;
     position: relative;
     background:transparent url('../images/ui/green-ptr.svg') left top no-repeat;
+    background-size: 100%;
     float: left;
-    top: 0;
-    left: 0;
     z-index: 1;
+    margin-left: -63px;
+
+    @include media($m) {
+      width: 145px;
+      height: 145px;
+      margin-left: 0;
+    }
+
+    @include media($l) {
+      width: 150px;
+      height: 145px;
+    }
   }
 
   span{
     display: block;
     position: relative;
-    margin-bottom: .6rem;
+    
+    @include media($m) {
+      margin-bottom: .6rem;
+    }
   }
 }
 
 .header-description{
+  float: left;
+  position: relative;
+  width: 235px;
+  margin-left: 1rem;
 
   @include media($m) {
-
+    width: 310px;
+    margin-left: 1.5rem;
+    padding-top: .5rem;
   }
+
   @include media($l) {
     width: 380px;
-    position: relative;
     margin-left: 1.8rem;
     padding-top: .5rem;
-    float: left;
   }
 
   p{

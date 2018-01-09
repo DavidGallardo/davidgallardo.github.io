@@ -202,7 +202,7 @@ $(document).ready(function() {
 
 	var watchers = $('.faded').map(function(i, element) {
 
-		var watcher = scrollMonitor.create( element, -150);
+		var watcher = scrollMonitor.create( element, -200);
 		watcher.enterViewport(function() {
 				$(element).addClass('fadeInUp')
 		});
