@@ -78,7 +78,7 @@ $radius: 2px;
   @include border-box;
   @include clearfix; 
 
-  @include media($l){
+  @include media($l) {
     padding: 0 2.5rem;
 
   }
@@ -143,34 +143,14 @@ $radius: 2px;
 }
 .rotateIt { animation-name: rotateIt; }
 
-@keyframes rotateItBig {
-  0% {  opacity: 0; transform: rotate(-90deg); }
-  100% {  opacity: .15; transform: rotate(-18deg); }
-}
-.rotateItBig { animation-name: rotateItBig; }
 
 
 
-
-
-
-.delay-2 {
-  animation-delay: .2s
-}
-.delay-3 {
-  animation-delay: .3s
-}
-.delay-4 {
-  animation-delay: .4s
-}
-.delay-5 {
-  animation-delay: .5s
-}
-.delay-6 {
-  animation-delay: .6s
-}
-.delay-7 {
-  animation-delay: .7s
-}
+.delay-2 { animation-delay: .2s }
+.delay-3 { animation-delay: .3s }
+.delay-4 { animation-delay: .4s }
+.delay-5 { animation-delay: .5s }
+.delay-6 { animation-delay: .6s }
+.delay-7 { animation-delay: .7s }
 
 

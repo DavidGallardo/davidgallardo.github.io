@@ -127,14 +127,14 @@
     margin-left: -63px;
 
     @include media($m) {
-      width: 145px;
-      height: 145px;
+      width: 135px;
+      height: 135px;
       margin-left: 0;
     }
 
     @include media($l) {
       width: 150px;
-      height: 145px;
+      height: 150px;
     }
   }
 
@@ -151,7 +151,7 @@
 .header-description{
   float: left;
   position: relative;
-  width: 235px;
+  width: 238px;
   margin-left: 1rem;
 
   @include media($m) {
@@ -168,7 +168,7 @@
 
   p{
     color: $grey-6;
-    @include catamaran(300, 1rem);
+    @include catamaran(400, 1rem);
     line-height: 25px;
 
     @include media($m) {
