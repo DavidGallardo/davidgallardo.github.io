@@ -4,7 +4,6 @@
 .wrap {
   @include out-container;
   padding: 0 1rem;
-  // overflow: hidden;
   @include media($m) {
     padding: 0;
   }
@@ -14,192 +13,172 @@
 /////////////////////////////////////////
 .hm-header {
   width: 100%;
-  max-width: $max-width;
   height: auto;
   display: block;
   position: relative;
-  background: white;
+  background: #fff;
   margin: 0 auto;
   z-index: 1;
-  padding: 7rem 0 12rem 0;
   overflow: hidden;
 
   @include media($m) {
-    overflow: auto;
+    overflow: visible;
     background: white;
-    height: 680px;
-    margin-top: 1rem;
+    padding: 0;
+  }
+}
+.box-wrap{
+  width: 100%; 
+  height: 360px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  padding: 0 1rem;
+  padding-top: 4rem;
+  @include border-box;
+  overflow: hidden;
+
+  @include media($m) {
+    height: 700px;
     padding: 0;
   }
   @include media($l) {
-    height: 770px;
-    margin-top: 2.5rem;
-  }
-  @include media($lx) {
-    margin-top: 3.5rem;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    transform: rotate(-8deg);
-    transform-origin: 8% 0;
-    top: 0;
-    left: -28%;
-    z-index: -1;
-    width: 150%;
-    height: 90%;
-    display: block;
-    background: #292A2B;
-    box-shadow: 0 2rem 0rem 0 $main;
-
-    @include media($m) {
-      display: none;
-    }
-  } 
-}
-.box-wrap{
-  width: 100%;  
-  height: 100%;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include border-box;
-}
-.header-box_dark{
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: #292A2B;
-  @include border-box;
-
-  @include media($m) {
-    display: block;
-    width: 50%;
-    height: 650px;
-    border-left: 1rem solid white;
-  }
-  @include media($l) {
-    height: 680px;
-    border-left: 2.5rem solid white;
-  }
-  @include media($lx) {
-    border-left: 1.5rem solid white;
-  }
-}
-.header-box_light{
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0rem;
-  right: 0;
-  background: #2E2F30;
-  @include border-box;
-
-  @include media($m) {
-    width: 50%;
-    top: 1rem;
-    height: 680px;
-    border-right: 1rem solid white;
-  }
-  @include media($l) {
     height: 750px;
-    border-right: 2.5rem solid white;
   }
-  @include media($lx) {
-    border-right: 1.5rem solid white;
+}
+
+.header-title{
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media($m) {
+    width: 490px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include media($l) {
+    width: 600px;
+    height: 340px;
+    transform: translate(-50%, -60%);
   }
   
-  > .green-pattern{
-    width: 101px;
-    height: 71px;
+  .grey-box{
+    content: '';
+    width: 550px;
+    height: 450px;
     display: block;
     position: absolute;
-    background:transparent url('../images/ui/pattern-green.svg') left top no-repeat;
-    background-size: 100%;
-    bottom: -2rem;
-    left: -5rem;
-    display: none;
+    background: $placeholders;
+    border-radius: 50px;
+    transform: rotate(-15deg);
+    left: -30px;
+    top: -240px;
+
     @include media($m) {
-      width: 202px;
-      height: 142px;
-      display: block;
-      bottom: auto;
-      left: auto;
-      top: 4rem;
-      right: 30%;
+      width: 1180px;
+      height: 750px;
+      left: -180px;
+      top: -400px;
     }
+
+    @include media($l) {
+      left: -180px;
+      top: -360px;
+    }
+
+    &.border{
+      background: transparent;
+      border: 2px solid $grey-3;
+      opacity: .1;
+    }
+
+
   }
 
-  > .arrow{
-    width: 1rem;
-    height: 90px;
+  > h1{
     display: block;
-    position: absolute;
-    background:transparent url('../images/ui/down-arrow.svg') left top no-repeat;
-    bottom: 8rem;
-    right: 45%;
-    display: none;
-    transition: all .3s;
-
-    @include media($m) {
-      display: block;
-    }
-
-    &:after, &:before{
-      display: none;
-    }
-
-    &:hover{
-      bottom: 7.8rem;
-      transition: all .3s;
-    }
-  }
-}
-
-.header-eyebrow{
-  @include column(12,12);
-  margin-bottom: 1.5rem;
-
-  @include media($m) {
-    @include column(7,12);
-    margin-top: 11rem;
-    margin-left: 1/12*100%;
-    margin-bottom: 2.5rem;
-    text-align: left;
-  }
-
-  > span{
-    @include catamaran(800, .8rem);
-    color: $main;
+    margin-bottom: .5rem;
     text-transform: uppercase;
-    letter-spacing: 1.4px;
-    border: 1px solid $main;
-    border-radius: 2px;
-    padding: .1rem .5rem .05rem .5rem;
-    margin-left: 2px;
+    letter-spacing: 4px;
+
     @include media($m) {
-      @include catamaran(800, 1rem);
-      padding: .2rem .5rem .1rem .5rem;
+      margin-left: 60px;
+      margin-bottom: 1.5rem;
+    }
+    @include media($l) {
+      margin-left: 85px;
+    }
+  }
+
+  > .green-pattern{
+    width: 85px;
+    height: 85px;
+    position: relative;
+    background:transparent url('../images/ui/green-ptr.svg') left top no-repeat;
+    background-size: 100%;
+    float: left;
+    z-index: 1;
+    margin-left: -63px;
+
+    @include media($m) {
+      width: 135px;
+      height: 135px;
+      margin-left: 0;
+    }
+
+    @include media($l) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  span{
+    display: block;
+    position: relative;
+    
+    @include media($m) {
+      margin-bottom: .6rem;
     }
   }
 }
-.header-title{
-  @include column(11.5,12);
-  margin-left: 0rem;
+
+.header-description{
+  float: left;
+  position: relative;
+  width: 238px;
+  margin-left: 1rem;
 
   @include media($m) {
-    @include column(8,12);
-    margin-left: 1/12*100%;
-    text-align: left;
-  }
-  @include media($l) {
-    @include column(7,12);
+    width: 310px;
+    margin-left: 1.5rem;
+    padding-top: .5rem;
   }
 
+  @include media($l) {
+    width: 380px;
+    margin-left: 1.8rem;
+    padding-top: .5rem;
+  }
+
+  p{
+    color: $grey-6;
+    @include catamaran(400, 1rem);
+    line-height: 25px;
+
+    @include media($m) {
+      @include catamaran(300, 1.2rem);
+      line-height: 36px;
+    }
+    @include media($l) {
+      @include catamaran(300, 1.5rem);
+      line-height: 40px;
+    }
+  }
 
 }

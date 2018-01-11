@@ -3,13 +3,13 @@
 //MyStory
 /////////////////////////////////////////
 .story {
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   @include media($m) {
     margin-top: 5rem;
   }
   @include media($l) {
-    margin-top: 7.5rem;
+    margin-top: 5.5rem;
   }
 }
 .story_title {
@@ -72,12 +72,9 @@
   border-top: 1px solid $dividers;
 
   @include media($m) {
-    @include column(4, 11);
+    @include column(10.5, 11);
     padding-left: 0rem;
     padding-top: 2rem;
-    border-left: 0;
-    border-top: 1px solid $main;
-    
   }
   @include media($l) {
     @include column(3, 11);
@@ -86,7 +83,7 @@
     margin-top: 0;
     padding-top: 0;
     padding-left: 1rem;
-    border-left: 1px solid $main;
+    border-left: 1px solid $dividers;
     border-top: 0;
   }
 }
@@ -95,6 +92,18 @@
   color: $text;
 	margin-bottom: 1.7rem;
   line-height: .8;
+  display: block;
+  
+  @include media($m) {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+
+  @include media($l) {
+    display: block;
+    margin-right: 0;
+  }
+
 	&:last-child{
 		margin-bottom: 0;
 	}

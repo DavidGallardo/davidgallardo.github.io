@@ -203,8 +203,8 @@
   }
   .item_title {
     @include media($m) {
-      width: 19rem;
-      right: -11.5rem;
+      width: 17rem;
+      right: -9.5rem;
       top: 8rem;
       position: absolute;
     }
