@@ -50,6 +50,11 @@ p, li , figcaption{
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
+
+  @include media($l) {
+    @include catamaran(400, 1.1rem);
+    line-height: 1.625;
+  }
 }
 a {
   text-decoration: none;
