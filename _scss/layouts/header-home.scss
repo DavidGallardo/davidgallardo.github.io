@@ -172,12 +172,14 @@
     line-height: 25px;
 
     @include media($m) {
-      @include catamaran(300, 1.2rem);
+      @include catamaran(400, 1.2rem);
       line-height: 36px;
+      opacity: .9;
     }
     @include media($l) {
-      @include catamaran(300, 1.5rem);
+      @include catamaran(400, 1.5rem);
       line-height: 40px;
+      
     }
   }
 
