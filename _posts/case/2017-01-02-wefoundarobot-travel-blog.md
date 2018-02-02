@@ -36,7 +36,7 @@ We thought that would be fun to have a small dashboard with highlighted informat
 </div>
 
 
-## Training abroad. New Technology, fresh design.
+## Training abroad. New technology, fresh design.
 
 We didn't want to stop doing what we love, but traveling for an entire year, makes it quite difficult. Getting new clients and continue working, even for small projects, would require to settle for a while, a schedule and good connection. Although we did some projectes during the trip, building this blog was the perfect opportunity to still improving our skills in a super fun way. 
 
