@@ -1,14 +1,38 @@
 ---
 layout: default
 ---
-<div class="case-seat-website">
-	<header class="">
-		<h1>{{ page.title }}</h1>
+<div class="case">
+	{% include navigation.html %}
+	<a href="{{ site.url }}/#cases" class="close-btn animated fadeInUp delay-5"></a>
+	<header class="case-header">
+		<div class="wrap">
+			<div class="copy-block">
+				<h1 class="case-title reveal-text delay-4">{{ page.title }}</h1>
+				<ul class="case-data">
+					<li class="case-data-item">
+						<div class="label reveal-text ">Company</div>
+						<div class="info reveal-text delay-5">{{ page.company }}</div>
+					</li>
+					<li class="case-data-item">
+						<div class="label reveal-text">Role</div>
+						<div class="info reveal-text delay-5">{{ page.role }}</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="case-header-image animated fadeInUp delay-4">
+			<figure>
+				<img src='{{ "/images/cases/01/header.png" | replace: "01", page.number | relative_url }}' alt="{{ page.title }}">
+			</figure>
+		</div>
 	</header>
-	<section>
-		<article>
-			
+	
+	<section class="article-content">
+		<article class="article">
+
+			{{ content }}
 			
 		</article>
 	</section>
 </div>
+{% include cases.html %}
