@@ -15,7 +15,7 @@ permalink: /:categories/:title/
 # baseurl: ''
 
 # PROD
-url: http://dgallardo.com
+url: https://dgallardo.com
 baseurl: ''
 
 
