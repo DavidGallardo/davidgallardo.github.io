@@ -44,6 +44,8 @@ We didn't want to stop doing what we love, but traveling for an entire year, mak
 
 Discover more on our instagram: <a href="https://www.instagram.com/wefoundarobot/">@wefoundarobot</a>.
 
+Or check it live at: <a href="https://wefoundarobot.com">wefoundarobot.com</a>.
+
 <div class="case-image">
 	<img src='{{ "images/cases/02/wfar-04.png" | relative_url }}' alt="We Found a Robot Websites">
 </div>

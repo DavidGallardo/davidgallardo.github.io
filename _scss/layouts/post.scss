@@ -128,6 +128,7 @@
     padding: 0 1rem;
     position: relative;
     @include border-box;
+    @include work(400, 1.75rem);
 
     @include media($m) {
       padding: 0;

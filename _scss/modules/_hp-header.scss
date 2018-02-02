@@ -1,0 +1,46 @@
+.wrap {
+  @include out-container;
+  @include clearfix;
+}
+.heading {
+  @include column(12, 12);
+  margin-top: 4.5rem;
+  @include clearfix;
+
+  @include media($m) {
+    @include column(11, 12);
+    margin-left: 1/12*100%;
+  }
+  > .title {
+    margin-left: -4px;
+    max-width: 400px;
+  }
+}
+.heading-columns {
+  margin-top: 4rem;
+
+  > .left-column {
+    @include column(12, 12);
+
+    @include media($m) {
+      @include column(10, 12);
+      margin-left: 1/12*100%;
+    }
+    @include media($l) {
+      @include column(5, 12);
+      margin-left: 1/12*100%;
+    }
+  }
+  > .right-column {
+    @include column(12, 12);
+
+    @include media($m) {
+      @include column(10, 12);
+      margin-left: 1/12*100%;
+    }
+    @include media($l) {
+      @include column(5, 12);
+      margin-left: .45/12*100%;
+    }
+  }
+}
