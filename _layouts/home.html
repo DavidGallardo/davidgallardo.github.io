@@ -1,151 +1,41 @@
 ---
 layout: default
 ---
-<header id="hm-header" class="hm-header">
-  <div class="box-wrap">
-    <div class="header-title" id="logo" role="logo">
-      <div class="grey-box  rotateIt "></div>
-      <h1><span class="name animated fadeInLeft">David</span><span class="surname animated fadeInLeft delay-2">Gallardo</span></h1>
-      <div class="green-pattern"></div>
-      <div class="header-description animated fadeInUp">
-        <p>A guy who's focused on designing products that work beautifully.</p>
-      </div>
-    </div>
-  </div>
-  </header>
-  <section id="story" class="story">
-    <div class="story_wrap wrap">
-      <div class="story_title">
-        <h2 class="faded">My long story, short.</h2>
-      </div>
-      <div class="story_column-block">
-        <div class="story_column faded ">
-          <p>I'm a Designer based in Barcelona who loves sports and has been <a href="https://www.wefoundarobot.com/" target="_blank" rel="noopener noreferrer">traveling</a> around the world during 2017. My couple and I started in St.Petersburg last March and we are about to finish in San Francisco.</p>
-          <p>Before that decision, I was working at <a href="http://lola-mullenlowe.com/" target="_blank" rel="noopener noreferrer">LOLA</a> [Mullenlowe Group] leading a small team of 3 other designers. Being such a small group, we got a really big project in our hands: Rethink &amp; Improve the Global Digital Ecosystem of the largest Spanish automotive brand, SEAT.</p>
-        </div>
-        <div class="story_column faded delay-2">
-          <p>Previously, I worked for a really cool company called <a href="https://www.linkedin.com/company/675629/" target="_blank" rel="noopener noreferrer">Mobivery</a>. There I crafted tons of mobile applications for all the clients and platforms you can imagine. Also, I had the opportunity to work on <a href="https://www.linkedin.com/company/2319614/" target="_blank" rel="noopener noreferrer">Malcom</a>, a SaaS for Mobile Marketing that combined push, analytics and a layer of BI.</p>
-          <p>
-            In the side, I taught design in schools like <a href="https://www.ironhack.com/" target="_blank" rel="noopener noreferrer">Ironhack</a> or TheAppSchool and directly to design teams inside companies like Schneider Electrics or TV3.</p>
-          </div>
-         
-        </div>
-      </div>
-    </section>
-    <section id="showcase" class="showcase">
-      <div class="wrap">
-        
-        <div class="showcase_title ">
-          <div class="green-ptrn"></div>
-          <h2 class="faded">Showcase of recent projects.</h2>
-          <p class="faded">So here is what I've been doing recently. For now you can just read a small description of what the job was and a link to it, but I'm writting the cases by the time you are reading this. More info coming soon :). </p>
-        </div>
-      </div>
-      <div class="wrap">
-        <ul class="showcase-block">
-          {% for post in site.categories.case limit:10 %}
-            {% if post.number == "01" %}
-              <li id="seat-case" class="showcase_item">
-                <div class="item_title title_mobile">
-                  <a href="{{ post.url }}"><h3><span>SEAT </span> <span>GLOBAL </span> <span>RESPONSIVE </span> <span>WEBSITE</span></h3></a>
-                </div>
-                <div class="item_image-block item_image-block_{{ post.number }}">
-                  <div class="item_title title_desktop faded delay-1">
-                    <a href="{{ post.url }}"><h3><span>SEAT </span> <span>GLOBAL </span> <span>RESPONSIVE </span> <span>WEBSITE</span></h3></a>
-                  </div>
-                </div>
-                <div class="item_copy-block">
-                  <div class="item_copy-block_inner">
-                    <div class="item_subtitle faded">{{post.type}}</div>
-                    <div class="faded delay-2">
-                      <p class="item_copy">{{post.excerpt}}</p>
-                      <a href="{{ post.url }}" class="case-link">Read Case</a>
-                    </div>
-                    
-                  </div>
-                </div>
-              </li>
-            {% endif %}
-            {% if post.number == "02" %}
-              <li id="robot-case" class="showcase_item">
-                <div class="item_title title_mobile">
-                  <a href="https://www.wefoundarobot.com" target="_blank" rel="noopener noreferrer"><h3><span>WE </span> <span>FOUND </span> <span>A </span> <span>ROBOT </span> <span>- </span><span>TRAVEL </span> <span>BLOG</span></h3></a>
-                </div>
-                <div class="item_image-block item_image-block_{{ post.number }}">
-                  <div class="item_title title_desktop faded delay-1">
-                    <a href="https://wefoundarobot.com" target="_blank" rel="noopener noreferrer"><h3><span>WE </span> <span>FOUND </span> <span>A </span> <span>ROBOT </span> <span>- </span><span>TRAVEL </span> <span>BLOG</span></h3></a>
-                  </div>
-                </div>
-                <div class="item_copy-block">
-                  <div class="item_copy-block_inner">
-                    <div class="item_subtitle faded delay-2">{{post.type}}</div>
-                    <div class="faded delay-2">
-                      <p class="item_copy">{{post.excerpt}}</p>
-                      <a href="https://wefoundarobot.com" class="case-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </section>
-    <section id="grid" class="showcase">
-      <div class="wrap">
-        <div class="showcase_title ">
-          <div class="green-ptrn"></div>
-          <h2 class="faded">More work, maybe old maybe gone.</h2>
-          <p class="faded">Apart from the previous, the last 7 years I've been busy designing for many other clients, some as a part of a team, some others as a solo player. Here are some extra examples both, web and mobile. </p>
-        </div>
-      </div>
-      <div class="wrap">
-        <div class="example-grid">
-          <div class="grid-row">
-            <div class="grid-item item-01">
-              <figure class="item-image faded">
-                <img src="/images/grid/lola.png" alt="Lola MullenLowe Website">
-                <figcaption class="item-copy">LOLA MullenLowe Responsive Website design</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-item item-02">
-              <figure class="item-image faded">
-                <img src="/images/grid/fcc.png" alt="FCC Aqualia Dashboard">
-                <figcaption class="item-copy">FCC Aqualia Water Consumption Dashboard</figcaption>
-              </figure>
-            </div>
-            <div class="grid-item item-03">
-              <figure class="item-image faded">
-                <img src="/images/grid/caixabank.png" alt="CaixaBank Media center concept">
-                <figcaption class="item-copy">CaixaBank  Media Center Concept</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-item item-04">
-              <figure class="item-image faded">
-                <img src="/images/grid/wfa.png" alt="WFA Website Concept">
-                <figcaption class="item-copy">World Federation of Advertisers Website Proposal</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-item item-05">
-              <figure class="item-image faded">
-                <img src="/images/grid/aba.png" alt="ABA English App">
-                <figcaption class="item-copy">ABA English Mobile App Design</figcaption>
-              </figure>
-            </div>
-            <div class="grid-item item-06">
-              <figure class="item-image faded">
-                <img src="/images/grid/eltiempo.png" alt="CaixaBank Media center concept">
-                <figcaption class="item-copy">ElTiempo.es Mobile App Design</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+<header id="header" class="hm-header">
+	{% include navigation.html %}
+</header>
+<section class="about">
+	<div class="wrap">
+		<div class="heading">
+			<h1 class="title animated fadeInUp">Hi, there!</h1>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="heading-columns">
+			<div class="left-column animated fadeInUp delay-3">
+				<p>
+					I'm David, a designer based in Barcelona who likes to create interfaces that work beautifuly. I also love sports and I've been <a href="https://wefoundarobot.com">traveling</a> the world during 2017.
+				</p>
+				<p>
+					Before that decision, I was working happily at <a href="http://lola-mullenlowe.com">LOLA</a> [MullenLowe Group] leading a small team of designers with a really big project in hands: Rethink & Improve the Global Digital Ecosystem of the largest Spanish automotive brand, SEAT.
+				</p>
+			</div>
+			<div class="right-column animated fadeInUp delay-5">
+				<p>
+					Even before, I was in a really cool company called <a href="https://www.linkedin.com/company/675629/">Mobivery</a>. There, I crafted tons of mobile applications for many clients & platforms. Also, I had the opportunity to work on <a href="https://www.linkedin.com/company/2319614/">Malcom</a>, a SaaS for Mobile Marketing that combined push, analytics and a layer of BI.
+				</p>
+				<p>
+					In the side, I taught design in schools like <a href="https://ironhack.com">Ironhack</a> or TheAppSchool; and directly to design teams inside companies like Schneider Electrics or TV3.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="home-image reveal">
+			<figure>
+				<img src="images/home/placeholder.png" alt="placeholder">
+			</figure>
+		</div>
+	</div>
+</section>
+{% include cases.html %}

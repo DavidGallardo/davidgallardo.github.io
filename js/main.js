@@ -17,9 +17,18 @@ $(document).ready(function() {
 
 	var watchers = $('.faded').map(function(i, element) {
 
-		var watcher = scrollMonitor.create( element, -200);
+		var watcher = scrollMonitor.create( element, -50);
 		watcher.enterViewport(function() {
 				$(element).addClass('fadeInUp')
+		});
+
+	});
+
+	var wat = $('.reveal').map(function(i, element) {
+
+		var watcher = scrollMonitor.create( element, 0);
+		watcher.enterViewport(function() {
+				$(element).addClass('reveal-text')
 		});
 
 	});

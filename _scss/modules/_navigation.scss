@@ -1,0 +1,17 @@
+.navigation {
+  @include column(12, 12);
+  margin-top: 2rem;
+
+  @include media($m) {
+    @include column(11, 12);
+    margin-left: 1/12*100%;
+    margin-top: 3rem;
+  }
+}
+.logo {
+  max-width: 60px;
+  a {
+    @include work(800, 1.5rem);
+    z-index: 1;
+  }
+}

@@ -1,0 +1,131 @@
+
+//Animations
+.animated{
+  animation-duration:0s;
+  @include media($m) {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+
+.faded{
+  opacity: 1;
+  animation-duration:0s;
+  @include media($m) {
+    opacity: 0;
+    animation-duration:.75s;
+    animation-fill-mode: both;
+  }
+}
+.animated.infinite {  animation-iteration-count: infinite; }
+
+@keyframes fadeInUp {
+  from { opacity: 0;  transform: translate3d(0, 30%, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-10%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInLeft { animation-name: fadeInLeft; }
+
+
+
+
+
+
+/////////////////////////////////////
+
+////////////////////////////////////
+
+
+.reveal-text,
+.reveal-text::after {
+  animation-duration:0s;
+  @include media($m) {
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.0, 0.5, 0.0, 1);
+  }
+
+}
+
+.reveal-text {
+  position: relative;
+  display: block;
+  animation-name: reveal-text;
+  cursor: default;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $main;
+    // background-color: $title;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: revealer-text;
+  }
+  
+}
+
+
+@keyframes reveal-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes revealer-text {
+  
+  0%, 40% {
+    transform-origin: 0 50%;
+  }
+  
+  50%, 100% {
+    transform-origin: 100% 50%;   
+  }
+
+  
+  50% {
+    transform: scaleX(1);
+  }
+  
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+
+.delay-2 { animation-delay: .2s !important; }
+.delay-3 { animation-delay: .3s !important; }
+.delay-4 { animation-delay: .4s !important; }
+.delay-5 { animation-delay: .5s !important ;}
+.delay-6 { animation-delay: .6s !important ;}
+.delay-7 { animation-delay: .7s !important ;}
+
+
+
+
+
+
+
+
+
+
+
+
+
