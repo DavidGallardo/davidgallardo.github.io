@@ -2,36 +2,10 @@ $(document).ready(function() {
 
 	// Scroll Down Arrow
 
-	// $("#scroll-arrow").click(function() {
-	//     $('html, body').animate({
-	//         scrollTop: $("#story").offset().top -100
-	//     }, 800);
-	// });
-  $(window).bind("mousewheel", function() {
-     $("html, body").stop(true, false);;
-  });
-
-  // ///////////////////////////////////////////////////////////////
-
-  // Trigger Animations On Scroll
-
-	var watchers = $('.faded').map(function(i, element) {
-
-		var watcher = scrollMonitor.create( element, -50);
-		watcher.enterViewport(function() {
-				$(element).addClass('fadeInUp')
-		});
-
+	$("#contact-link").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $("#contact-section").offset().top -100
+	    }, 800);
 	});
 
-	var wat = $('.reveal').map(function(i, element) {
-
-		var watcher = scrollMonitor.create( element, 0);
-		watcher.enterViewport(function() {
-				$(element).addClass('reveal-text')
-		});
-
-	});
-
-});
-
+});	

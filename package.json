@@ -1,35 +1,32 @@
 {
-  "name": "browser-sync-jekyll",
+  "name": "biovic",
   "version": "0.0.0",
-  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "description": "A Website for Biovic",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
+  "author": "David Gallardo",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^1.9.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^1.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-order": "^1.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.1.2"
+    "gulp-autoprefixer": "^6.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+    "url": "https://github.com/DavidGallardo/biovic.git"
   },
   "keywords": [
-    "jekyll",
     "gulp",
     "sass",
     "browsersync"
   ],
   "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
+    "url": "https://github.com/DavidGallardo/biovic/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/DavidGallardo/biovic.git",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
 }

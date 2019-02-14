@@ -1,0 +1,76 @@
+// Typography
+
+h1, h2, h3, h4, h5, p, ul, li, a {
+  @include no-space;
+  color: $grey-1;
+}
+h1 {
+  @include ubuntu(700, 60px);
+  line-height: 60px;
+
+  @include media($m) {
+    @include ubuntu(700, 120px);
+    line-height: 106px;
+  }
+  @include media($l) {
+    @include ubuntu(700, 120px);
+    line-height: 106px;
+  }
+}
+h2 { }
+h3 { }
+h4 { }
+p, li, figcaption {
+  letter-spacing: 1px;
+  @include ubuntu(300, 24px);
+  line-height: 36px;
+
+  @include media($m) {
+    @include ubuntu(400, 32px);
+    line-height: 48px;
+  }
+}
+a {
+  position: relative;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover{
+    color: white;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background: $grey-1;
+    z-index: -1;
+    transition: all .3s;
+    
+    @include media($m) {
+      width: 100%;
+      height: 4px;
+    }
+
+  }
+  &:hover:after {
+    height: 106%;
+    width: 104%;
+    left: -2%;
+    border-radius: 2px;
+    transition: all .3s;
+  }
+
+}
+blockquote {
+  p {
+    padding-left: .5rem;
+    font-style: italic;
+  }
+}
+ul {
+  list-style: none;
+}
