@@ -1,3 +1,8 @@
+html{
+  cursor: url('../img/custom-cursor.svg'), auto;
+}
+
+
 .out-container {
   @include out-container;
   padding: 0;

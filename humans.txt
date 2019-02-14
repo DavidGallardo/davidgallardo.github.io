@@ -3,11 +3,10 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <name> David Gallardo 
+    <role> Web Designer
+    <twitter> https://twitter.com/davrocks
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
