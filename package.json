@@ -1,32 +1,29 @@
 {
-  "name": "biovic",
-  "version": "0.0.0",
-  "description": "A Website for Biovic",
+  "name": "komuti.io",
+  "version": "1.0.0",
+  "description": "Komuti's Landing page",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "David Gallardo",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp-autoprefixer": "^6.0.0"
-  },
+  "author": "David Gallardo & David Serrano",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DavidGallardo/biovic.git"
+    "url": "git://github.com/metrolab/getkomuti.io.git"
   },
-  "keywords": [
-    "gulp",
-    "sass",
-    "browsersync"
-  ],
-  "bugs": {
-    "url": "https://github.com/DavidGallardo/biovic/issues"
-  },
-  "homepage": "https://github.com/DavidGallardo/biovic.git",
-  "dependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "browser-sync": "^2.26.5",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^4.4.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.1.7",
+    "vinyl-paths": "^2.1.0"
   }
 }
