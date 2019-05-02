@@ -16,22 +16,22 @@ var paths = {
   styles: {
     src: "./dev/scss/main.scss",
     srcWatch: "./dev/scss/**/*.scss",
-    dest: "./docs/css"
+    dest: "./css"
   },
   markup: {
     src: ["./dev/**/*.html"],
     srcWatch: ["./dev/**/*.html", "./dev/js/**/*.js"],
-    dest: "./docs/"
+    dest: "./"
   },
   scripts: {
     src: ["./dev/js/plugins.js", "./dev/js/modernizr.min.js", "./dev/js/main.js"],
     srcWatch: "./dev/js/**/*.js",
-    dest: "./docs/js"
+    dest: "./js"
   },
   imgs: {
     src: "./dev/img/**/*",
     srcWatch: "./dev/img/**/*",
-    dest: "./docs/img"
+    dest: "./img"
   }
 
 }
@@ -87,10 +87,10 @@ function images() {
 //Clean all auto-generated code from docs
 function clean() {
   return del([
-    './docs/css',
-    './docs/img',
-    './docs/js',
-    './docs/index.html'
+    './css',
+    './img',
+    './js',
+    './index.html'
   ]);
 }
 
@@ -105,7 +105,7 @@ function watch(){
 
   browserSync.init({
     server: {
-      baseDir: "./docs"
+      baseDir: "./"
     }
   });
 
