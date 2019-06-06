@@ -117,7 +117,7 @@ function watch(){
 
 
 //Build task
-var build = gulp.series(clean, markup, gulp.parallel(images, styles, scripts), watch);
+const build = gulp.series(clean, markup, gulp.parallel(images, styles, scripts), watch);
 
 //export tasks
 exports.clean = clean;
