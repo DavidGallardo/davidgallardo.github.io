@@ -1,2 +1,3 @@
 # David Gallardo | Designer
-Hey there! Welcome to my personal portfolio, here you will find some of my recent works as a product designer and my contact details.
+
+Hey, I'm David Gallardo, a Product designer based in sunny Barcelona. Welcome to my personal website!
